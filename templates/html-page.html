@@ -1,16 +1,19 @@
 <html>
     <head>
-        <meta name="http-status" content="{{status}}">
         <link rel="canonical" href="{{url}}" />
         <title>{{title}}</title>
-        <meta name="author" content="{{authors | join(', ')}}">
-        <meta name="summary" content="{{summary}}">
-        <meta name="date" content="{{date}}">
-        <meta name="language" content="{{language}}">
-        <meta name="native_ad" content="{{native_ad ? 'yes': 'no'}}">
-        <meta name="image" content="{{image}}">
     </head>
     <body>
+        <p><b>Url: </b>{{url}}</p>
+        <p><b>HTTP status: </b>{{status}}</p>
+        <p><b>Author: </b>{{authors | join(', ')}}</p>
+        <p><b>Summary: </b>{{summary | raw}}</p>
+        <p><b>Date: </b>{{date}}</p>
+        <p><b>Language: </b>{{language}}</p>
+        <p><b>Native ad: </b>{{native_ad ? 'yes': 'no'}}</p>
+        <p><b>Image: </b>{{image}}</p>
+        <img src="{{image}}" />
+        <h1>{{title}}</h1>
         {{html | raw}}
     </body>
 </html>
