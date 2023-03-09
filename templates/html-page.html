@@ -1,0 +1,17 @@
+<html lang="{{language}}">
+    <head>
+        <meta name="http-status" content="{{status}}">
+        <link rel="canonical" href="{{url}}" />
+        <title>{{title}}</title>
+        <meta name="author" content="{{authors | join(', ')}}">
+        <meta name="description" content="{{summary}}">
+        <meta name="dcterms.date" content="{{date}}">
+        <meta name="native_ad" content="{{native_ad ? 'yes': 'no'}}">
+        <meta name="twitter:image" content="{{image}}">
+        
+        <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+    </head>
+    <body>
+        {{html | raw}}
+    </body>
+</html>
