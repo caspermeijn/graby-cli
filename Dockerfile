@@ -18,4 +18,4 @@ WORKDIR /usr/src/myapp
 RUN composer install
 
 # Run script
-CMD [ "php", "graby-cli.php" ]
+ENTRYPOINT [ "php", "graby-cli.php" ]
